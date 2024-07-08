@@ -36,8 +36,8 @@ This project is about building a web application to translate languages using la
 
 If you want to contact me, you can reach me through below handles.
 
-[![linkedin](https://img.shields.io/badge/Imran_Khan-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/imran-khan-94439a135/)
-[![Twitter](https://img.shields.io/badge/Imran_Khan-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/imran120198)
+[![linkedin](https://img.shields.io/badge/Linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/imran-khan-94439a135/)
+[![Twitter](https://img.shields.io/badge/Github-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/imran120198)
 
 
 
