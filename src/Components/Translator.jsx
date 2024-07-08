@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import copy from "copy-to-clipboard";
 import { AiFillCopy } from "react-icons/ai";
 import { MdClear } from "react-icons/md";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { SelectBox } from "./SelectBox";
-import { AiOutlineSound } from "react-icons/ai";
 
 export const Translator = () => {
   const [q, setQ] = useState("");
@@ -24,7 +24,7 @@ export const Translator = () => {
       return false;
     }
     if (source === "" || target === "") {
-      return toast("Please select language");
+      return alert("Please select language");
     }
 
     const options = {
@@ -60,7 +60,9 @@ export const Translator = () => {
 
   const resetText = () => {
     if (q === "" && output === "") {
+      alert("Textbox is already empty!");
     } else {
+      alert("Text removed!");
       setQ("");
       setOutput("");
     }
@@ -108,13 +110,11 @@ export const Translator = () => {
               onClick={() => copyToClipboard(output)}
               className="icon"
             />
-            {/* <AiOutlineSound
-              onClick={() => speakText(output)}
-              className="icon"
-            /> */}
           </div>
         </div>
       </div>
+
+      <ToastContainer />
     </>
   );
 };
