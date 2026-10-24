@@ -1,23 +1,39 @@
-export const SelectBox = ({ id, select }) => {
+export const LANGUAGES = [
+  { code: "en", name: "English" },
+  { code: "hi", name: "Hindi" },
+  { code: "mr", name: "Marathi" },
+  { code: "gu", name: "Gujarati" },
+  { code: "ta", name: "Tamil" },
+  { code: "te", name: "Telugu" },
+  { code: "ur", name: "Urdu" },
+  { code: "ar", name: "Arabic" },
+  { code: "es", name: "Spanish" },
+  { code: "de", name: "German" },
+  { code: "fr", name: "French" },
+  { code: "tr", name: "Turkish" },
+  { code: "ko", name: "Korean" },
+  { code: "ru", name: "Russian" },
+  { code: "zh", name: "Chinese" },
+  { code: "cs", name: "Czech" },
+];
+
+export const SelectBox = ({ id, select, value }) => {
   return (
-    <>
-      <div className="select">
-        <select id={id} onChange={select}>
-          <option value="">Select Language</option>
-          <option value="en">English</option>
-          <option value="hi"> Hindi</option>
-          <option value="es">Spanish</option>
-          <option value="de">German</option>
-          <option value="fr"> French</option>
-          <option value="tr"> Turkish</option>
-          <option value="ar">Arabic</option>
-          <option value="ur">Urdu</option>
-          <option value="ko">Korean</option>
-          <option value="ru">Russian</option>
-          <option value="zh">Chinese</option>
-          <option value="cs">Czech</option>
-        </select>
-      </div>
-    </>
+    <div className="selectWrapper">
+      <select
+        id={id}
+        onChange={select}
+        value={value || ""}
+        className="modernSelect"
+        aria-label="Select language"
+      >
+        <option value="">Choose Language...</option>
+        {LANGUAGES.map((lang) => (
+          <option key={lang.code} value={lang.code}>
+            {lang.name}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
